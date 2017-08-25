@@ -7,6 +7,6 @@ Player inputs guess between 1 and 20
         guess is high then give clue "lower"
         guess is low then give clue "higher"
     if guess is right game over "Player Wins"
-    if points drop to '0' "player loses, Computer wins"
+    if points drop to '0' "Player loses, Computer wins"
 
 Repeat lines 5 - 10 until player or computer wins
