@@ -10,4 +10,3 @@ Player inputs guess between 1 and 20
     if points drop to '0' "player loses, Computer wins"
 
 Repeat lines 5 - 10 until player or computer wins
-   
