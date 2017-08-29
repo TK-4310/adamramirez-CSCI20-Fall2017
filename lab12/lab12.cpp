@@ -8,10 +8,10 @@ using namespace std;
 
 int main()
 {
-   cout << "  __" << endl;
-   cout << "_('')_" << endl;
+   cout << "   _" << endl;
+   cout << " _(")_" << endl;
    cout << "(_ . _)" << endl;
-   cout << " /  : \ " << endl;
-   cout << "(_/  \_)" << endl;
+   cout << " / : \ " << endl;
+   cout << "(_/ \_)" << endl;
     
 }
