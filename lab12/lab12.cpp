@@ -15,3 +15,12 @@ int main()
    cout << "(_/ \_)" << endl;
     
 }
+
+
+/*How image should look
+   _
+ _(")_
+(_ . _)
+ / : \
+(_/ \_)
+/*
