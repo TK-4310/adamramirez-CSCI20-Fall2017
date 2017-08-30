@@ -19,23 +19,23 @@ int main()
     int user_input1;
     long long int answer1;
     
-     person_per1 = ((( 60 / person_per1 ) * 60) * 24) * 365; //equation gives me how many people people in the US per year
+    person_per1 = ((( 60 / person_per1 ) * 60) * 24) * 365; //equation gives me how many people people in the US per year
    
-   person_per2 = (((60 / person_per2 ) * 60 ) * 24 ) * 365; //equation gives migrant per year
+    person_per2 = (((60 / person_per2 ) * 60 ) * 24 ) * 365; //equation gives migrant per year
    
-   person_per3 = (((60 / person_per3 ) * 60 ) * 24 ) * 365; //equation for each baby born per year
+    person_per3 = (((60 / person_per3 ) * 60 ) * 24 ) * 365; //equation for each baby born per year
    
-   person_per4 = (((60 / person_per4 ) * 60 ) * 24 ) * 365; //equation for deaths per year
+    person_per4 = (((60 / person_per4 ) * 60 ) * 24 ) * 365; //equation for deaths per year
    
     cout << "Please enter number of years to add then hit enter. "; 
     cin >> user_input1; //input for additional years
     
-   answer1 = (us_population + person_per1 + person_per2 + person_per3 - person_per4);
+    answer1 = (us_population + person_per1 + person_per2 + person_per3 - person_per4);
    
    
-   the_year = the_year + user_input1;
+    the_year = the_year + user_input1;
    
-   answer1 = answer1 * user_input1; //Tried to include user_input in the first answer1 equation but my answer would keep ending up negative when testing with 8 years and above
+    answer1 = answer1 * user_input1; //Tried to include user_input in the first answer1 equation but my answer would keep ending up negative when testing with 8 years and above
    
     //cout << answer1; //manual test for formulas
     
