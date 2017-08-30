@@ -17,10 +17,10 @@ int main()
 }
 
 
-//*How image should look
+//How image should look
 //   _
 // _(")_
 //(_ . _)
 // / : \
 //(_/ \_)
-//*
+//
