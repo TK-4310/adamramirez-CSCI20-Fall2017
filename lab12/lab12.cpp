@@ -1,5 +1,7 @@
 //Created by: Adam Ramirez 
 //Created on: 8/24/2017
+//Description: Printing a gingerbread man
+//Citation and References: https://s-media-cache-ak0.pinimg.com/originals/3a/8a/2b/3a8a2b072d5b40c8b257bad632d43049.jpg
     
 
 
