@@ -1,6 +1,7 @@
 //Created by: Adam Ramirez 
 //Created on: 9/05/2017
-//Description: Floating Point
+//Description: Floating Point, converts cents into dollars outputting the ammount of each coin and the total ammount the user will receive
+// with a fee attached.
 //Citation and References: 
     
 
