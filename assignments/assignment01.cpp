@@ -10,7 +10,8 @@ using namespace std;
 
 struct payme
 {
-    string name;
+    string first_name;
+    string last_name;
     double hours_worked;
     double hourly_rate;
     
@@ -27,30 +28,23 @@ int main()
     long long int starting_odometer;
     long long int ending_odometer;
     
-    payme.employee1;
+    payme employee1;
     
     cout << "Name: ";
-    cin >> employee1.name;
-    cout << "Hours Worked: "
+    cin >> employee1.first_name >> employee1.last_name;
+    cout << "Hours Worked: ";
     cin >> employee1.hours_worked;
     cout << "Hourly Pay: ";
     cin >> employee1.hourly_rate;
     
-    cout << "Do you pay Insurance?"
-    cin >> if(string.equalsIgnoreCase ( "yes" )){
-            cout << "Insurance Cost: ";
-            cin >> insurance_cost;
-    }
-    cout << "Mileage: ";
-    cin >> if(0){
-    }
-        else(){
-            cout << "What id your starting Odometer?";
-            cin >> starting_odometer;
-            cout << "What's your ending Odometer?";
-            cin >> ending_odometer;
-        }
-    }
+    cout << "Insurance Cost: ";
+    cin >> insurance_cost;
+    
+    cout << "Mileage pay, starting Odometer: ";
+    cin >> starting_odometer;
+    cout << "Mileage pay, ending Odometer: ";
+    cin >> ending_odometer;
+    cout << " " << endl;
     
     
     hourly_pay = employee1.hourly_rate * employee1.hours_worked;
@@ -60,6 +54,13 @@ int main()
     taxes = gross_pay * 0.17;
     net_pay = gross_pay - taxes;
     
-    //up next is the yearly maths, outputs and make sure if else statements work 
+    
+    cout << "Employee Name        " << "Hours        " << "Hourly Pay        " << "Gross Pay        " << "Net Pay" << endl;
+    cout << " " << endl;
+    cout <<employee1.first_name << " " << employee1.last_name << "         " << employee1.hours_worked << "            " << employee1.hourly_rate << "            ";
+    cout  << gross_pay << "          ";
+    cout << net_pay;
+    
+    //up next is the outputs and make sure if else statements work 
     
 }
