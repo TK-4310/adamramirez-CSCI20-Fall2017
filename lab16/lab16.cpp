@@ -26,7 +26,7 @@ int main()
     double wfc_total;
     double port_total;
     
-    stock fordm;                            //Begin defining orders
+    stock fordm;                            //Begin defining Objects
     fordm.stock_name = "FordM";
     
     stock albertsn;
@@ -42,7 +42,7 @@ int main()
     wfc.stock_name = "WFC";
     
     stock portfolio;
-    portfolio.stock_name = "Total_Portfolio";       //End definging orders: Ford, Albertsons, Apple, Tesla and Wells Fargo
+    portfolio.stock_name = "Total_Portfolio";       //End definging objects: Ford, Albertsons, Apple, Tesla and Wells Fargo
     
     cout << "Please enter the total ammount of shares you have of " << fordm.stock_name << ": ";      //Beginning getting number of stocks for orders and price of each share.
     cin >> fordm.number_of_shares;
