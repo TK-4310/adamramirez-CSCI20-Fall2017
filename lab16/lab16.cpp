@@ -19,37 +19,45 @@ struct stock {
 
 int main()
 {
+    int ford_total;
+    stock fordm;
     
-    cout << "Please enter the total ammount of share you have of " << stockname.FordM << ": ";       //Gives me information for Ford Motor company stock total
-    cin >> numbah.share_amount;
+    cout << "Please enter the total ammount of share you have of " << stockname.fordm << ": ";       //Gives me information for Ford Motor company stock total
+    cin >> number_of_shares.fordM;
     cout << " Please enter the value of the share: " ;                                                  //
-    cin >> numbah.ford_share_value;
-    numbah.ford_total = numbah.share_amount * numbah.ford_share_value;                             //
+    cin >> number_of_shares.fordm;
+    ford_total = current_share_price.fordm * num_shares.fordm;
     
-    cout << "Please enter the total ammount of shares you have of " << stockname.Albertsn << ": ";
-    cin >> numbah.num_shares2;
+    int albertsn_total;
+    stock_name albertsn;
+    cout << "Please enter the total ammount of shares you have of " << stockname.albertsn << ": ";
+    cin >> number_of_shares.albertsn;
     cout << " Please enter the value of the share: " ;                                                  //
-    cin >> numbah.albertsn_share_value;
-    numbah.albertsn_total = numbah.share_amount2 * numbah.albertsn_share_value;
+    cin >> number_of_shares.albertsn;
+    albertsn_total = current_share_price.albertsn * num_shares.albertsn;
     
-    cout << "Please enter the total ammount of shares you have of " << stockname.AAPL << ": ";
-    cin >> numbah.num_shares3;
+    int aapl_total;
+    stock_name aapl;
+    cout << "Please enter the total ammount of shares you have of " << stockname.aapl << ": ";
+    cin >> number_of_shares.aapl;
     cout << " Please enter the value of the share: " ;                                                  //
-    cin >> numbah.aapl_share_value;
-    numbah.aapl_total = numbah.share_amount3 * numbah.aapl_share_value;
+    cin >> number_of_shares.aapl;
+    aapl_total = current_share_price.aapl * num_shares.aapl;
     
-    cout << "Please enter the total ammount of shares you have of " << stockname.TSLA << ": ";
-    cin >> numbah.num_shares4;
+    int tsla_total;
+    stock_name tsla;
+    cout << "Please enter the total ammount of shares you have of " << stockname.tsla << ": ";
+    cin >> number_of_shares.tsla;
     cout << " Please enter the value of the share: " ;                                                  //
-    cin >> numbah.tsla_share_value;
-    numbah.tsla_total = numbah.share_amount4 * numbah.tsla_share_value;    
+    cin >> number_of_shares.tsla;
+    tsla_total = current_share_price.tsla * num_shares.tsla;   
     
     cout << "Stock Name      No of Shares     Current Value     Total Value" << endl;
     cout << "----------      ------------     -------------     -----------" << endl;
-    cout << "FordM               " << numbah.num_shares << "               " << "18.76             " << numbah.total_value << endl;
-    cout << "Albertsn            " << numbah.num_shares2 << "               " << "34.39             " << numbah.total_value2 << endl;
-    cout << "AAPLT               " << numbah.num_shares3 << "               " << "145.91            " << numbah.total_value3 << endl;
-    cout << "TSLA                " << numbah.num_shares4 << "               " << "375.64            " << numbah.total_value4 << endl;
+    cout << stock_name.fordm << "                    " << number_of_shares.fordm << "               " << "18.76             " << ford_total << endl;
+    cout << "Albertsn            " << number_of_shares.albertsn << "               " << "34.39             " << albertsn_total << endl;
+    cout << "AAPLT               " << number_of_shares.aapl << "               " << "145.91            " << aapl_total << endl;
+    cout << "TSLA                " << number_of_shares.tsla << "               " << "375.64            " << tsla_total << endl;
     
     
 }
