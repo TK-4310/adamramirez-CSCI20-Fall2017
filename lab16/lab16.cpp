@@ -1,16 +1,16 @@
 //Created by: Adam Ramirez 
 //Created on: 9/12/2017
 //Description: Objects
-//Citation and References:
+//Citation and References: Example used Monsters code by April Browne
 
 #include <iostream>
 #include <string>
 using namespace std;
 
 struct stock {
- string stock_name;
+ string stock_name;             //struct for the variables or stock name, sector, share price and price of each share
  string sector;
- int current_share_price;
+ double current_share_price;
  int number_of_shares;
     
 };
@@ -19,45 +19,84 @@ struct stock {
 
 int main()
 {
-    int ford_total;
-    stock fordm;
+    double  ford_total;
+    double albertsn_total;
+    double aapl_total;
+    double tsla_total;
+    double wfc_total;
+    double port_total;
     
-    cout << "Please enter the total ammount of share you have of " << stockname.fordm << ": ";       //Gives me information for Ford Motor company stock total
-    cin >> number_of_shares.fordM;
-    cout << " Please enter the value of the share: " ;                                                  //
-    cin >> number_of_shares.fordm;
-    ford_total = current_share_price.fordm * num_shares.fordm;
+    stock fordm;                            //Begin defining orders
+    fordm.stock_name = "FordM";
     
-    int albertsn_total;
-    stock_name albertsn;
-    cout << "Please enter the total ammount of shares you have of " << stockname.albertsn << ": ";
-    cin >> number_of_shares.albertsn;
-    cout << " Please enter the value of the share: " ;                                                  //
-    cin >> number_of_shares.albertsn;
-    albertsn_total = current_share_price.albertsn * num_shares.albertsn;
+    stock albertsn;
+    albertsn.stock_name = "Albertsn";
     
-    int aapl_total;
-    stock_name aapl;
-    cout << "Please enter the total ammount of shares you have of " << stockname.aapl << ": ";
-    cin >> number_of_shares.aapl;
-    cout << " Please enter the value of the share: " ;                                                  //
-    cin >> number_of_shares.aapl;
-    aapl_total = current_share_price.aapl * num_shares.aapl;
+    stock aapl;
+    aapl.stock_name = "AAPL";
     
-    int tsla_total;
-    stock_name tsla;
-    cout << "Please enter the total ammount of shares you have of " << stockname.tsla << ": ";
-    cin >> number_of_shares.tsla;
-    cout << " Please enter the value of the share: " ;                                                  //
-    cin >> number_of_shares.tsla;
-    tsla_total = current_share_price.tsla * num_shares.tsla;   
+    stock tsla;
+    tsla.stock_name = "TSLA";
     
-    cout << "Stock Name      No of Shares     Current Value     Total Value" << endl;
-    cout << "----------      ------------     -------------     -----------" << endl;
-    cout << stock_name.fordm << "                    " << number_of_shares.fordm << "               " << "18.76             " << ford_total << endl;
-    cout << "Albertsn            " << number_of_shares.albertsn << "               " << "34.39             " << albertsn_total << endl;
-    cout << "AAPLT               " << number_of_shares.aapl << "               " << "145.91            " << aapl_total << endl;
-    cout << "TSLA                " << number_of_shares.tsla << "               " << "375.64            " << tsla_total << endl;
+    stock wfc;
+    wfc.stock_name = "WFC";
     
+    stock portfolio;
+    portfolio.stock_name = "Total_Portfolio";       //End definging orders: Ford, Albertsons, Apple, Tesla and Wells Fargo
+    
+    cout << "Please enter the total ammount of shares you have of " << fordm.stock_name << ": ";      //Beginning getting number of stocks for orders and price of each share.
+    cin >> fordm.number_of_shares;
+    cout << " Please enter the value of the share: ";                                                  
+    cin >> fordm.current_share_price;
+    
+    cout << "Please enter the total ammount of shares you have of " << albertsn.stock_name << ": ";
+    cin >> albertsn.number_of_shares;
+    cout << " Please enter the value of the share: ";                                                  
+    cin >> albertsn.current_share_price;
+    
+    cout << "Please enter the total ammount of shares you have of " << aapl.stock_name << ": ";
+    cin >> aapl.number_of_shares;
+    cout << " Please enter the value of the share: ";                                                  
+    cin >> aapl.current_share_price;
+    
+    cout << "Please enter the total ammount of shares you have of " << tsla.stock_name << ": ";
+    cin >> tsla.number_of_shares;
+    cout << " Please enter the value of the share: ";                                                  
+    cin >> tsla.current_share_price;
+
+    
+    cout << "Please enter the total ammount of shares you have of " << wfc.stock_name << ": ";
+    cin >> wfc.number_of_shares;
+    cout << " Please enter the value of the share: ";                                                  
+    cin >> wfc.current_share_price;
+    cout << " " << endl;                                                                            //End of stock number of shares and price per share order as follows Ford, Albertsons, Apple, Tesla and Wells Fargo
+    
+    ford_total = fordm.current_share_price * fordm.number_of_shares;                //Math to get the total value or stocks at their current prices
+    albertsn_total = albertsn.current_share_price * albertsn.number_of_shares;
+    aapl_total = aapl.current_share_price * aapl.number_of_shares;
+    tsla_total = tsla.current_share_price * tsla.number_of_shares;  
+    wfc_total = wfc.current_share_price * wfc.number_of_shares;
+    port_total = ford_total + albertsn_total + aapl_total + tsla_total + wfc_total; //End Math
+    
+    cout << "Stock Name      No of Shares     Current Value     Total Value" << endl;                                                                                           //Output for table to display values entered and  
+    cout << "----------      ------------     -------------     -----------" << endl;                                                                                           //total values of shares
+    cout << fordm.stock_name << "                " << fordm.number_of_shares << "               " << fordm.current_share_price << "          " << ford_total << endl;
+    cout << albertsn.stock_name << "            " << albertsn.number_of_shares << "               " << albertsn.current_share_price << "          " << albertsn_total << endl;
+    cout << aapl.stock_name << "                 " << aapl.number_of_shares << "               " << aapl.current_share_price << "          " << aapl_total << endl;
+    cout << tsla.stock_name << "                " << tsla.number_of_shares << "               " << tsla.current_share_price << "          " << tsla_total << endl;
+    cout << wfc.stock_name << "                " << wfc.number_of_shares << "               " << wfc.current_share_price << "          " << wfc_total << endl;
+    cout << " " << endl;
+    cout << portfolio.stock_name << ": " << port_total;                                                                                                                         //End of output, ends with portfolio total
     
 }
+
+//If used correctly with the provided inputs in the assign this should be the result
+//Stock Name      No of Shares     Current Value     Total Value
+//----------      ------------     -------------     -----------
+//FordM                87               18.76          1632.12
+//Albertsn            542               34.39          18639.4
+//AAPL                 5               145.91          729.55
+//TSLA                50               375.64         18782
+//WFC                1368               53.02         72531.4
+// 
+//Total_Portfolio: 112314
