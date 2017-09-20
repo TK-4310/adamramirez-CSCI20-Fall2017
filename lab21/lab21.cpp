@@ -1,11 +1,12 @@
 //Created by: Adam Ramirez 
 //Created on: 9/14/2017
 //Description: Lab 2.1 - Calling Functions
-//Citation and References:
+//Citation and References: Used http://www.cplusplus.com/reference/cmath/ for library and fucntions used for math
+//  http://www.cplusplus.com/reference/cmath/pow/ best use of to the power of
 
 #include <iostream>
 #include <string>
-#include <math.h>
+#include <cmath>
 
 struct weather{
     double velocity;
@@ -31,7 +32,7 @@ int main(){
     windspeed1.old_style = 0.081 * ( 3.71 * sqrt(windspeed1.velocity) + 5.81 - 0.25 * windspeed1.velocity ) * (windspeed1.temp - 91.4) + 91.4;
     windspeed1.new_style = 35.74 + 0.6245 * windspeed1.temp - 35.75 * pow( windspeed1.velocity, 0.16 ) + 0.4275 * windspeed1.temp * pow(windspeed1.velocity, 0.16);
     
-    windspeed1.diff = fdim( windspeed1.old_style - windspeed1.new_style);
+    windspeed1.diff = windspeed1.old_style - windspeed1.new_style;
     
     cout <<"Wind Speed     " << "Old Formula     " << "New Formula     " << "Difference     " << endl;
     cout << "     " << windspeed1.velocity << "         " << windspeed1.old_style << "     " << "     " << windspeed1.new_style << "         " << windspeed1.diff;
