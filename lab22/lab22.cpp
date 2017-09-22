@@ -10,9 +10,9 @@
 using namespace std;
 
 int num_generator(){                                    //function to perform random number generation
-   srand (time(0)); 
+   srand (time(0));                                     //is needed for the rand to work below
    
-    int number = (rand() % 100) + 1;
+    int number = (rand() % 100) + 1;                    //Gets me the random number
     cout << "Your random number is " << number << ".";
     
     
@@ -26,4 +26,4 @@ int main(){
     
  
 }
-//Your random number is 97.
+//Results: Your random number is 97.
