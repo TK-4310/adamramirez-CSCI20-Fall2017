@@ -70,67 +70,67 @@ int main(){
  
     cout << "Name of Book: ";           //book one
     getline(cin, name);
-    book_one.SetBookTitle(name);
+    book_one.SetBookTitle(name);        //gets name of book one
     
     cout << "Name of Author: ";
     getline(cin, author_name);
-    book_one.SetAuthor(author_name);
+    book_one.SetAuthor(author_name);    //gets author name of book one
     
     cout << "Copyright Year: ";
     cin >> copy_year;
     cin.ignore(1000, '\n');
-    book_one.SetCopyright(copy_year);   //end book one
+    book_one.SetCopyright(copy_year);   //end book one, gets copyright year of book one
     
     cout << "Name of Book: ";            //book two
     getline(cin, name);
-    book_two.SetBookTitle(name);
+    book_two.SetBookTitle(name);        //gets name of book two
     
     cout << "Name of Author: ";
     getline(cin, author_name);
-    book_two.SetAuthor(author_name);
+    book_two.SetAuthor(author_name);    //gets author of book two
     
     cout << "Copyright Year: ";
     cin >> copy_year;
     cin.ignore(1000, '\n');
-    book_two.SetCopyright(copy_year);       //end book two
+    book_two.SetCopyright(copy_year);       //end book two, gets copyright year of book two
     
     cout << "Name of Book: ";            //book three
     getline(cin, name);
-    book_three.SetBookTitle(name);
+    book_three.SetBookTitle(name);      //gets name of book three
     
     cout << "Name of Author: ";
     getline(cin, author_name);
-    book_three.SetAuthor(author_name);
+    book_three.SetAuthor(author_name);  //gets author name of book three
     
     cout << "Copyright Year: ";
     cin >> copy_year;
     cin.ignore(1000, '\n');
-    book_three.SetCopyright(copy_year); //end book three
+    book_three.SetCopyright(copy_year); //end book three, gets copyright year of book three
     
     cout << "Name of Book: ";            //book four
     getline(cin,name);
-    book_four.SetBookTitle(name);
+    book_four.SetBookTitle(name);       //gets name of book four
     
     cout << "Name of Author: ";
     getline(cin, author_name);
-    book_four.SetAuthor(author_name);
+    book_four.SetAuthor(author_name);   //gets author name of book four
     
     cout << "Copyright Year: ";
     cin >> copy_year;
     cin.ignore(1000, '\n');
-    book_four.SetCopyright(copy_year);  //end book four
+    book_four.SetCopyright(copy_year);  //end book four, gets copyright year of book four
     
     cout << "Name of Book: ";            //book five
     getline(cin,name);
-    book_five.SetBookTitle(name);
+    book_five.SetBookTitle(name);       //gets name of book five
     
     cout << "Name of Author: ";
     getline(cin, author_name);
-    book_five.SetAuthor(author_name);
+    book_five.SetAuthor(author_name);   //gets author name of book five
     
     cout << "Copyright Year: ";
     cin >> copy_year;
-    book_five.SetCopyright(copy_year);  
+    book_five.SetCopyright(copy_year);  //gets copy right year of book five
     
     
     book_one.Print();
