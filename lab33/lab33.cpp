@@ -12,10 +12,7 @@ using namespace std;
 
 int NumGenerator(){                         //Random number creator for the game, computer's number to be guessed    
     
-   srand (time(0));                         //is needed for the rand to work below
-   
-
-   
+    srand (time(0));                         //is needed for the rand to work below
     return (rand() % ((1 - 50)) + 1);       //Gets me the random number
     
     
