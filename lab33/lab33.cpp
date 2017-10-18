@@ -1,7 +1,7 @@
 //Created by: Adam Ramirez
 //Created on: 10/17/2017
 //Description: Lab 3.3 - Using loops create a guessing game
-//Citation and References: zybooks for swtich formatting
+//Citation and References: 
 
 #include <iostream>
 #include <string>
