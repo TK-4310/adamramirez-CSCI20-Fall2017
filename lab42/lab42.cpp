@@ -25,11 +25,12 @@ int main(){
     int quantity = 0;
     int cost = 0;
     int items_cart = 0;
+    int counter = 0;
 
     
     char shop = 'y';
     
-    product_purchase[0] = product_purchase[1] = product_purchase[2] = product_purchase[3] = product_purchase[4] = product_purchase[5] = product_purchase[6] = product_purchase[7] = product_purchase[8] = product_purchase[9] = 0;
+    product_purchase[0] = product_purchase[1] = product_purchase[2] = product_purchase[3] = product_purchase[4] = product_purchase[5] = product_purchase[6] = product_purchase[7] = product_purchase[8] = product_purchase[9] = -1;
     prices[0] = 5;          inventory[0] = 10;
     prices[1] = 1;          inventory[1] = inventory[0];
     prices[2] = 15;         inventory[2] = inventory[0];
@@ -72,66 +73,72 @@ int main(){
         cout <<" Stock: " << inventory[i] << endl;
         cout << " " << endl;
         
-        
-        
         }
+        
+        
         cout << "Please Enter the ID Number of the Product You Would Like to Purchase: " << endl;
         cin >> id;
         cout << "Please enter Quantity: ";
         cin >> quantity;
-        
+        cout << " " << endl;
         
         
         if (id == 100){
-            cost = prices[0] + cost;
-            items_cart = items_cart + quantity;
-            inventory[0]=inventory[0] - quantity;
+            cost = ((prices[0] * quantity) + cost);
+            items_cart += quantity;
+            inventory[0] -= quantity;
+            product_purchase[0] = 0;
+            counter += counter;
             
         }
         else if (id == 101){
-            cost = prices[1] + cost;
+            cost = (( prices[1] * quantity) + cost);
             items_cart = items_cart + quantity ;;
-            inventory[1] = inventory[1] - quantity;
+            inventory[1] -= quantity;
+            product_purchase[1] = 1;
+            counter += counter;
         }
         else if (id == 102){
-            cost = prices[2] + cost;
-            items_cart = items_cart + quantity;
-            inventory[2] = inventory[2] - quantity;
+            cost = ((prices[2] * quantity) + cost);
+            items_cart += quantity;
+            inventory[2] -= quantity;
+            product_purchase[2] = 2;
+            counter += counter;
         }
         else if (id == 103){
-            cost = prices[3] + cost;
-            items_cart = items_cart + quantity;
-            inventory[3] = inventory[3] - quantity;
+            cost = ((prices[3] * quantity) + cost);
+            items_cart += quantity;
+            inventory[3] -= quantity;
         }
         else if (id == 104){
-            cost = prices[4] + cost;
-            items_cart = items_cart + quantity;
-            inventory[4] = inventory[4] - quantity;
+            cost = ((prices[4] * quantity) + cost);
+            items_cart += quantity;
+            inventory[4] -= quantity;
         }
         else if (id == 105){
-            cost = prices[5] + cost;
-            items_cart = items_cart + quantity;
-            inventory[5] = inventory[5] - quantity;
+            cost = ((prices[5] * quantity) + cost);
+            items_cart += quantity;
+            inventory[5] -= quantity;
         }
         else if (id == 106){
-            cost = prices[6] + cost;
-            items_cart = items_cart + quantity;
-            inventory[6] = inventory[6] - quantity;
+            cost = ((prices[6] * quantity) + cost);
+            items_cart += quantity;
+            inventory[6] -= quantity;
         }
         else if (id == 107){
-            cost = prices[7] + cost;
-            items_cart = items_cart + quantity;
-            inventory[7] = inventory[7] - quantity;
+            cost = ((prices[7] * quantity) + cost);
+            items_cart += quantity;
+            inventory[7] -= quantity;
         }
         else if (id == 108){
-            cost = prices[8] + cost;
-            items_cart = items_cart + quantity;
-            inventory[8] = inventory[8] - quantity;
+            cost = ((prices[8] * quantity) + cost);
+            items_cart += quantity;
+            inventory[8] -= quantity;
         }
         else if (id == 109){
-            cost = prices[9] + cost;
-            items_cart = items_cart + quantity;
-            inventory[9] = inventory[9] - quantity;
+            cost = ((prices[9] * quantity) + cost);
+            items_cart += quantity;
+            inventory[9] -= quantity;
         }
         // else{
         //     cout << "Done Shopping? Press n to be done y to continue: ";
@@ -140,23 +147,32 @@ int main(){
         // }
         
         
-    }
+    }   //end while loop
     
     if (shop == 'n'){
+            cout << "_____________________________________" << endl;
             cout << "Cart Total: $" << cost << endl;
+            
             if(items_cart > 0){
                 
                 cout <<  "Number of Items in Cart: " << items_cart << endl;
                 int i = items_cart;
                 
-                // for(i; i > 0; i--){
-                //     cout << "Products: " << endl;
-                //     cout << "   " << item[] << endl;
-                // }
-            }
+                for( i = 0; i < counter ; i++){
+                    cout << "Products: " << endl;
+                    
+                    for(int j = 0; j < 10; j++){
+                        
+                        if (j >= 0){
+                        cout << "   " << item[product_purchase[j]] << " Quantity: " << inventory[product_purchase[j]] - 10 << endl;
+                        
+                        }
+                    }
+                }
+            }   //end if(items_cart)
             
             
-        }
+        }   //end if (shop==n)
 
     
-}
+}   //end main
