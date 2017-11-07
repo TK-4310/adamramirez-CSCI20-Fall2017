@@ -13,6 +13,7 @@ using namespace std;
 
 int main(){
     string item[10];
+    string item_purchase[10];
     
     int num_holder = 10;
     
@@ -84,25 +85,25 @@ int main(){
         
         
         if (id == 100){
+            product_purchase[0] = quantity;
             cost = ((prices[0] * quantity) + cost);
             items_cart += quantity;
             inventory[0] -= quantity;
-            product_purchase[0] = 0;
             counter += counter;
             
         }
         else if (id == 101){
+            product_purchase[1] = quantity;
             cost = (( prices[1] * quantity) + cost);
             items_cart = items_cart + quantity ;;
             inventory[1] -= quantity;
-            product_purchase[1] = 1;
             counter += counter;
         }
         else if (id == 102){
+            product_purchase[2] = quantity;
             cost = ((prices[2] * quantity) + cost);
             items_cart += quantity;
             inventory[2] -= quantity;
-            product_purchase[2] = 2;
             counter += counter;
         }
         else if (id == 103){
@@ -162,7 +163,7 @@ int main(){
                 // for(int j = 0; j < 10; j++){
                     
                 //     if (j >= 0){
-                //     cout << "   " << item[product_purchase[j]] << " Quantity: " << inventory[product_purchase[j]] - 10 << endl;
+                //     cout << "   " << item[j] << " Quantity: " << product_purchase[j] << endl;
                     
                 //     }
                 // }
