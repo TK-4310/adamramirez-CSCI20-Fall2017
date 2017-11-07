@@ -11,70 +11,38 @@ using namespace std;
 
 
 
-class Customer{
-    private:
-        string item_[10];
-        int price_inventory_[10][10];
-        
-    public:
-    void SetInventoryItems(string item[10]);
-    string GetInventoryItems();
-    
-    Customer(){
-        cout << "No Items In Cart!" << endl;
-    }
-    Customer(string item[10] , int price_inventory[10][10]){
-        
-        
-        
-    }
-    
-    void Print(){
-        cout
-        
-    }
-    
-};
-    
-    Customer::SetInventoryItems(string item[10]){
-        
-        
-
-    }
-    Customer::GetInventoryItems(){
-        int i = 0;
-        
-        for( i=0; i < 10; i++){
-            item_[i] = item[i];
-            cout << SetInventoryItems(item[i]) << endl;
-            
-        }
-        return
-    }
-    
-
-
 int main(){
     string item[10];
     
+    int num_holder = 10;
+    
     int prices[10];
     int inventory[10];
-    // int place_holder1 = 10;
-    // int place_holder2 = 10;
-    // itn place_holder3 = 10;
+    int id_num[10];
+    int product_purchase[10];
+    
+    int id = 0;
+    int quantity = 0;
+    int cost = 0;
+    int items_cart = 0;
+
     
     char shop = 'y';
     
+    product_purchase[0] = product_purchase[1] = product_purchase[2] = product_purchase[3] = product_purchase[4] = product_purchase[5] = product_purchase[6] = product_purchase[7] = product_purchase[8] = product_purchase[9] = 0;
     prices[0] = 5;          inventory[0] = 10;
     prices[1] = 1;          inventory[1] = inventory[0];
     prices[2] = 15;         inventory[2] = inventory[0];
-    prices[3] = 50;         inventory[3] = inventory[0];
-    prices[4] = 500;        inventory[4] = inventory[0];
+    prices[3] = 5;          inventory[3] = inventory[0];
+    prices[4] = 50;         inventory[4] = inventory[0];
     prices[5] = 10;         inventory[5] = inventory[0];
-    prices[6] = 100000;     inventory[6] = inventory[0];
-    prices[7] = 999999;     inventory[7] = inventory[0];
-    prices[8] = 999999;     inventory[8] = inventory[0];
+    prices[6] = 10;         inventory[6] = inventory[0];
+    prices[7] = 60;         inventory[7] = inventory[0];
+    prices[8] = 99;         inventory[8] = inventory[0];
     prices[9] = 25;         inventory[9] = inventory[0];
+
+    id_num[0] = 100;        id_num[1] = 101;    id_num[2] = 102;    id_num[3] = 103;    id_num[3] = 104;    
+    id_num[5] = 105;    id_num[6] = 106;    id_num[7] = 107;    id_num[8] = 108;    id_num[9] = 109;
     
     item[0] = "Star";
     item[1] = "Mushroom";
@@ -88,18 +56,107 @@ int main(){
     item[9] = "Daddy Collar";
     
     while (shop == 'y'){
-        int i = 0;
+        int i;
+
+        
+        cout << "Press y to shop. ";
+        cin >> shop;
         cout << "Ready to shop here is what's Available: " << endl;
         
-        for( i; i < item[]; i++){
-            
-        cout << item[i] << " ";
         
-            for( i; i < )
+        for( i = 0; i < num_holder; i++){
+        
+        cout << "ID Number: " << id_num[i] << endl;
+        cout << "Product: " << item[i] << endl; 
+        cout << " Price: $" << prices[i] << endl;
+        cout <<" Stock: " << inventory[i] << endl;
+        cout << " " << endl;
+        
+        
+        
+        }
+        cout << "Please Enter the ID Number of the Product You Would Like to Purchase: " << endl;
+        cin >> id;
+        cout << "Please enter Quantity: ";
+        cin >> quantity;
+        
+        
+        
+        if (id == 100){
+            cost = prices[0] + cost;
+            items_cart = items_cart + quantity;
+            inventory[0]=inventory[0] - quantity;
             
         }
+        else if (id == 101){
+            cost = prices[1] + cost;
+            items_cart = items_cart + quantity ;;
+            inventory[1] = inventory[1] - quantity;
+        }
+        else if (id == 102){
+            cost = prices[2] + cost;
+            items_cart = items_cart + quantity;
+            inventory[2] = inventory[2] - quantity;
+        }
+        else if (id == 103){
+            cost = prices[3] + cost;
+            items_cart = items_cart + quantity;
+            inventory[3] = inventory[3] - quantity;
+        }
+        else if (id == 104){
+            cost = prices[4] + cost;
+            items_cart = items_cart + quantity;
+            inventory[4] = inventory[4] - quantity;
+        }
+        else if (id == 105){
+            cost = prices[5] + cost;
+            items_cart = items_cart + quantity;
+            inventory[5] = inventory[5] - quantity;
+        }
+        else if (id == 106){
+            cost = prices[6] + cost;
+            items_cart = items_cart + quantity;
+            inventory[6] = inventory[6] - quantity;
+        }
+        else if (id == 107){
+            cost = prices[7] + cost;
+            items_cart = items_cart + quantity;
+            inventory[7] = inventory[7] - quantity;
+        }
+        else if (id == 108){
+            cost = prices[8] + cost;
+            items_cart = items_cart + quantity;
+            inventory[8] = inventory[8] - quantity;
+        }
+        else if (id == 109){
+            cost = prices[9] + cost;
+            items_cart = items_cart + quantity;
+            inventory[9] = inventory[9] - quantity;
+        }
+        // else{
+        //     cout << "Done Shopping? Press n to be done y to continue: ";
+        //     cin >> shop;
+            
+        // }
+        
         
     }
+    
+    if (shop == 'n'){
+            cout << "Cart Total: $" << cost << endl;
+            if(items_cart > 0){
+                
+                cout <<  "Number of Items in Cart: " << items_cart << endl;
+                int i = items_cart;
+                
+                // for(i; i > 0; i--){
+                //     cout << "Products: " << endl;
+                //     cout << "   " << item[] << endl;
+                // }
+            }
+            
+            
+        }
 
     
 }
