@@ -157,20 +157,16 @@ int main(){
                 
                 cout <<  "Number of Items in Cart: " << items_cart << endl;
                 int i = items_cart;
+                cout << "Products: " << endl;
                 
-                for( i = 0; i < counter ; i++){
-                    cout << "Products: " << endl;
+                // for(int j = 0; j < 10; j++){
                     
-                    for(int j = 0; j < 10; j++){
-                        
-                        if (j >= 0){
-                        cout << "   " << item[product_purchase[j]] << " Quantity: " << inventory[product_purchase[j]] - 10 << endl;
-                        
-                        }
-                    }
-                }
+                //     if (j >= 0){
+                //     cout << "   " << item[product_purchase[j]] << " Quantity: " << inventory[product_purchase[j]] - 10 << endl;
+                    
+                //     }
+                // }
             }   //end if(items_cart)
-            
             
         }   //end if (shop==n)
 
