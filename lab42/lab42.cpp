@@ -95,7 +95,7 @@ int main(){
         else if (id == 101){
             product_purchase[1] = quantity;
             cost = (( prices[1] * quantity) + cost);
-            items_cart = items_cart + quantity ;;
+            items_cart = items_cart + quantity ;
             inventory[1] -= quantity;
             counter += counter;
         }
@@ -151,7 +151,7 @@ int main(){
     }   //end while loop
     
     if (shop == 'n'){
-            cout << "_____________________________________" << endl;
+            cout << "-----------------------------------------" << endl;
             cout << "Cart Total: $" << cost << endl;
             
             if(items_cart > 0){
@@ -160,13 +160,13 @@ int main(){
                 int i = items_cart;
                 cout << "Products: " << endl;
                 
-                // for(int j = 0; j < 10; j++){
+                for(int j = 0; j < 10; j++){
                     
-                //     if (j >= 0){
-                //     cout << "   " << item[j] << " Quantity: " << product_purchase[j] << endl;
+                    if(product_purchase[j] > 0){
+                    cout << "   " << item[j] << " Quantity: " << product_purchase[j] << endl;
+                    }
                     
-                //     }
-                // }
+                }
             }   //end if(items_cart)
             
         }   //end if (shop==n)
