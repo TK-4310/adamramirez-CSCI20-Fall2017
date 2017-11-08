@@ -233,3 +233,66 @@ int main(){
     
 }   //end main
 
+// Results after adding the listed cart
+// ======================================
+// Ready to shop here is what's Available: 
+// ID Number: 100
+// Product: Star
+//  Price: $5
+//  Stock: 10
+ 
+// ID Number: 101
+// Product: Mushroom
+//  Price: $1
+//  Stock: 10
+ 
+// ID Number: 102
+// Product: Red Bull - the same as Cocaine but legal
+//  Price: $15
+//  Stock: 10
+ 
+// ID Number: 103
+// Product: 1-up
+//  Price: $5
+//  Stock: 5
+ 
+// ID Number: 104
+// Product: Uzi
+//  Price: $50
+//  Stock: 10
+ 
+// ID Number: 105
+// Product: John Elway Action Figure
+//  Price: $10
+//  Stock: 10
+ 
+// ID Number: 106
+// Product: Cloak of Invisability
+//  Price: $10
+//  Stock: 10
+ 
+// ID Number: 107
+// Product: Wand - Pheonix Core
+//  Price: $60
+//  Stock: 10
+ 
+// ID Number: 108
+// Product: Light Saber - Blue
+//  Price: $99
+//  Stock: 10
+ 
+// ID Number: 109
+// Product: Daddy Collar
+//  Price: $25
+//  Stock: 7
+ 
+// Please Enter the ID Number of the Product You Would Like to Purchase: 
+// n
+// Please enter Quantity:  
+// -----------------------------------------
+//           Cart Total: $100
+// -----------------------------------------
+// Number of Items in Cart: 8
+// Products: 
+//   1-up || Quantity: 5
+//   Daddy Collar || Quantity: 3
