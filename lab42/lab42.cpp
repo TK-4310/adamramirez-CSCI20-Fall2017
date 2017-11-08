@@ -12,21 +12,19 @@ using namespace std;
 
 
 int main(){
-    string item[10];
-    string item_purchase[10];
+    string item[10];    //Array for inventory of products
     
     int num_holder = 10;
+    int prices[10];     //Array for prices
+    int inventory[10];  //Array for inventory count
+    int id_num[10];     //Array for bar codes
+    int product_purchase[10];   //Array to store 
     
-    int prices[10];
-    int inventory[10];
-    int id_num[10];
-    int product_purchase[10];
+    int id = 0;         //Users input for what products their going to purchase based on id_num
+    int quantity = 0;   //Holds quantity of products the customer is about to purchase
+    int cost = 0;       //Holds total cost of product in if else statements
+    int items_cart = 0; //Keeps track of total products in cart
     
-    int id = 0;
-    int quantity = 0;
-    int cost = 0;
-    int items_cart = 0;
-    int counter = 0;
 
     
     char shop = 'y';
@@ -43,7 +41,7 @@ int main(){
     prices[8] = 99;         inventory[8] = inventory[0];
     prices[9] = 25;         inventory[9] = inventory[0];
 
-    id_num[0] = 100;        id_num[1] = 101;    id_num[2] = 102;    id_num[3] = 103;    id_num[3] = 104;    
+    id_num[0] = 100;        id_num[1] = 101;    id_num[2] = 102;    id_num[3] = 103;    id_num[4] = 104;    
     id_num[5] = 105;    id_num[6] = 106;    id_num[7] = 107;    id_num[8] = 108;    id_num[9] = 109;
     
     item[0] = "Star";
@@ -85,91 +83,153 @@ int main(){
         
         
         if (id == 100){
-            product_purchase[0] = quantity;
-            cost = ((prices[0] * quantity) + cost);
-            items_cart += quantity;
-            inventory[0] -= quantity;
-            counter += counter;
+            product_purchase[0] = quantity;        //Customer purchase of Star
+            cost = ((prices[0] * quantity) + cost); //adds up how many are being added to cart
+            items_cart += quantity;                 //adds up total cost of the product depending on quantity
+            inventory[0] -= quantity;               //keeps running track of inventory
+            
+            if (inventory[0] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock
             
         }
         else if (id == 101){
-            product_purchase[1] = quantity;
-            cost = (( prices[1] * quantity) + cost);
-            items_cart = items_cart + quantity ;
+            product_purchase[1] = quantity;        //Customer purchase of Mushroom
+            cost = (( prices[1] * quantity) + cost);    //Adds up how many are being purchased
+            items_cart = items_cart + quantity ;        //removes products from inventory and adds to cart
             inventory[1] -= quantity;
-            counter += counter;
+            
+            if (inventory[1] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 102){
-            product_purchase[2] = quantity;
-            cost = ((prices[2] * quantity) + cost);
+            product_purchase[2] = quantity;    //Customer purchase of Red Bull
+            cost += (prices[2] * quantity);
             items_cart += quantity;
             inventory[2] -= quantity;
-            counter += counter;
+
+            if (inventory[2] == 0){
+                cout << "------------------" << endl;   
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 103){
+            product_purchase[3] = quantity;    //Customer purchase of 1-up
             cost = ((prices[3] * quantity) + cost);
             items_cart += quantity;
             inventory[3] -= quantity;
+            
+            if (inventory[3] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 104){
+            product_purchase[4] = quantity;    //Cusomter purchase of uzi
             cost = ((prices[4] * quantity) + cost);
             items_cart += quantity;
             inventory[4] -= quantity;
+            
+            if (inventory[4] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 105){
+            product_purchase[5] = quantity;    //Customer purchase of John Elway Action Figure
             cost = ((prices[5] * quantity) + cost);
             items_cart += quantity;
             inventory[5] -= quantity;
+            
+            if (inventory[5] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 106){
+            product_purchase[6] = quantity;    //Customer purchase of Cloak of invis
             cost = ((prices[6] * quantity) + cost);
             items_cart += quantity;
             inventory[6] -= quantity;
+            
+            if (inventory[6] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 107){
+            product_purchase[7] = quantity;    //Customer purchase of Wand
             cost = ((prices[7] * quantity) + cost);
             items_cart += quantity;
             inventory[7] -= quantity;
+            
+            if (inventory[7] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 108){
+            product_purchase[8] = quantity;    //Customer purchase of Light Saber - Blue
             cost = ((prices[8] * quantity) + cost);
             items_cart += quantity;
             inventory[8] -= quantity;
+            
+            if (inventory[8] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
         }
         else if (id == 109){
+            product_purchase[9] = quantity;    //Customer purchase of Daddy Collar
             cost = ((prices[9] * quantity) + cost);
             items_cart += quantity;
             inventory[9] -= quantity;
-        }
-        // else{
-        //     cout << "Done Shopping? Press n to be done y to continue: ";
-        //     cin >> shop;
             
-        // }
+            if (inventory[9] == 0){
+                cout << "------------------" << endl;
+                cout << "Sorry out of stock" << endl;
+                cout << "------------------" << endl;
+            }   //If product is out of stock            
+        }
+
         
         
     }   //end while loop
     
     if (shop == 'n'){
+            cout << "-----------------------------------------" << endl;    //Print out the cart's total at the top
+            cout << "           Cart Total: $" << cost << endl;
             cout << "-----------------------------------------" << endl;
-            cout << "Cart Total: $" << cost << endl;
             
             if(items_cart > 0){
                 
-                cout <<  "Number of Items in Cart: " << items_cart << endl;
+                cout <<  "Number of Items in Cart: " << items_cart << endl; //Provides total number of products in cart
                 int i = items_cart;
                 cout << "Products: " << endl;
                 
-                for(int j = 0; j < 10; j++){
+                for(int j = 0; j < 10; j++){    //Prints out the list of products
                     
                     if(product_purchase[j] > 0){
-                    cout << "   " << item[j] << " Quantity: " << product_purchase[j] << endl;
+                    cout << "   " << item[j] << " || Quantity: " << product_purchase[j] << endl;
                     }
                     
-                }
+                }//end of loop that prints out Product being purchased and Quantity of that product
             }   //end if(items_cart)
             
         }   //end if (shop==n)
 
     
 }   //end main
+
