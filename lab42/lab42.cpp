@@ -28,11 +28,11 @@ int main(){
 
     
     char shop = 'y';
-    
+    //All the arrays being defined below
     product_purchase[0] = product_purchase[1] = product_purchase[2] = product_purchase[3] = product_purchase[4] = product_purchase[5] = product_purchase[6] = product_purchase[7] = product_purchase[8] = product_purchase[9] = -1;
     prices[0] = 5;          inventory[0] = 10;
-    prices[1] = 1;          inventory[1] = inventory[0];
-    prices[2] = 15;         inventory[2] = inventory[0];
+    prices[1] = 1;          inventory[1] = inventory[0];    //Left sets the prices
+    prices[2] = 15;         inventory[2] = inventory[0];    //Right sets the inventory to start, Total of 10 of each.
     prices[3] = 5;          inventory[3] = inventory[0];
     prices[4] = 50;         inventory[4] = inventory[0];
     prices[5] = 10;         inventory[5] = inventory[0];
@@ -40,11 +40,11 @@ int main(){
     prices[7] = 60;         inventory[7] = inventory[0];
     prices[8] = 99;         inventory[8] = inventory[0];
     prices[9] = 25;         inventory[9] = inventory[0];
-
+    //Sets the ID Numbers for my inventory
     id_num[0] = 100;        id_num[1] = 101;    id_num[2] = 102;    id_num[3] = 103;    id_num[4] = 104;    
     id_num[5] = 105;    id_num[6] = 106;    id_num[7] = 107;    id_num[8] = 108;    id_num[9] = 109;
     
-    item[0] = "Star";
+    item[0] = "Star";                                   //List of inventory only 10 products
     item[1] = "Mushroom";
     item[2] = "Red Bull - the same as Cocaine but legal";
     item[3] = "1-up";
@@ -54,7 +54,7 @@ int main(){
     item[7] = "Wand - Pheonix Core";
     item[8] = "Light Saber - Blue";
     item[9] = "Daddy Collar";
-    
+    //End of arrays being defined above
     while (shop == 'y'){
         int i;
 
