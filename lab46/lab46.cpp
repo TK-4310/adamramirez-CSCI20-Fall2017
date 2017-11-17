@@ -32,8 +32,8 @@ main(){
     double total_num_values = 0;
     double gpa = 0;
     
-    inFS.open("input.txt");
-    outFS.open("output.txt");
+    inFS.open("input.txt");     //input from input.txt
+    outFS.open("output.txt");   //sends output to output.txt
     
     if (!inFS.is_open()){       //Incase input.txt can't be pulled
         
@@ -44,13 +44,13 @@ main(){
     }
     while ( !inFS.eof() ){      //Pulls all info from input.txt
     
-    inFS >> first_name;
+    inFS >> first_name; //pulls in first name, last name and number of classes from input.txt
     inFS >> last_name;
     inFS >> num_classes;
     
     
         for(i = 0; i < num_classes; i++){   //Pulls in units and letter grade
-            inFS >> num_hours[i];
+            inFS >> num_hours[i];       //pulls number of units/hours and letter grades from input.txt
             inFS >> letter_grade[i];
         }
     
@@ -80,7 +80,7 @@ main(){
                 //cout << total_num_values << endl;
             }
                 //cout << total_num_hours << " " << total_num_values << endl;   //Test calculations
-                gpa = total_num_values / total_num_hours;
+                gpa = total_num_values / total_num_hours;   //calculates GPA
                 
                 outFS << "___________________________________" << endl;         //output to output.txt
                 outFS << " Name: " << first_name << " " << last_name << endl;
@@ -92,7 +92,7 @@ main(){
                 outFS << "-----------------------------------" << endl;
                 outFS << "Units  |   Grades" << endl;
                 outFS << "-----------------" << endl;
-                for(i = 0; i < num_classes; i++){
+                for(i = 0; i < num_classes; i++){       //Prints out number of units/hours and letter grades
                     outFS << num_hours[i] << "     |     " <<letter_grade[i] << endl;
                 }
                 outFS << " " << endl;
@@ -104,8 +104,8 @@ main(){
     // <<  num_classes << " " << num_hours << " " << letter_grade;
     }
     
-    inFS.close();
-    outFS.close();
+    inFS.close();   //closes input.txt
+    outFS.close();  //closes output.txt
     
     return 0;
 }
