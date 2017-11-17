@@ -1,11 +1,11 @@
 //Created by: Adam Ramirez
-//Created on: 11/02/2017
+//Created on: 11/16/2017
 //Description: Lab 4.6 - A program that will read a student's grades and output an HTML page to 
 //      output a student's transcript including semester GPA and overall GPA. It should ask 
 //      for an input file that includes student's name, semester (number) and list of grades (A-F)
 //      and class hours. Reads the data then calculates the semester GPA and Overall GPA.
 //      name, number of classes, hours of class, grade
-//Citation and References: 
+//Citation and References: zybooks chapter 23
 
 #include<iostream>
 #include<fstream>
@@ -19,7 +19,7 @@ main(){
     ifstream inFS;
     ofstream outFS;
     
-    string first_name;
+    string first_name;  //Names variables
     string last_name;
     
     int num_classes = 0;
@@ -35,21 +35,21 @@ main(){
     inFS.open("input.txt");
     outFS.open("output.txt");
     
-    if (!inFS.is_open()){
+    if (!inFS.is_open()){       //Incase input.txt can't be pulled
         
         cout << "Could not open file!" << endl;
         
         return 1;
         
     }
-    while ( !inFS.eof() ){
+    while ( !inFS.eof() ){      //Pulls all info from input.txt
     
     inFS >> first_name;
     inFS >> last_name;
     inFS >> num_classes;
     
     
-        for(i = 0; i < num_classes; i++){
+        for(i = 0; i < num_classes; i++){   //Pulls in units and letter grade
             inFS >> num_hours[i];
             inFS >> letter_grade[i];
         }
@@ -73,7 +73,7 @@ main(){
             
                 //cout << letter_grade[i] << endl;  //Test printing out letter grades
             }
-            for(i = 0; i < num_classes; i++){
+            for(i = 0; i < num_classes; i++){                           //Calculates units and grades for GPA
                 total_num_hours += num_hours[i];
                 total_num_values = total_num_values + (num_hours[i] * grade_value[i]);
                 
@@ -82,7 +82,7 @@ main(){
                 //cout << total_num_hours << " " << total_num_values << endl;   //Test calculations
                 gpa = total_num_values / total_num_hours;
                 
-                outFS << "___________________________________" << endl;
+                outFS << "___________________________________" << endl;         //output to output.txt
                 outFS << " Name: " << first_name << " " << last_name << endl;
                 outFS << "-----------------------------------" << endl;
                 outFS << "Number of Classes Taken: " << num_classes << endl;
