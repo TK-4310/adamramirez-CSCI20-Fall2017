@@ -109,3 +109,6 @@ main(){
     
     return 0;
 }
+// Additional Notes:
+// I noticed that the last student repeats but when the fifth grade is removed it does not repeat,
+// I'm unsure on why it repeats because it has 1 additional class
