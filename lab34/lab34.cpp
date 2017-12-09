@@ -30,12 +30,14 @@ int main(){
                //cin >> sum;
                
         }
-                cout << "Sum is " << sum << endl;
+                cout << "Sum is " << sum << endl;   //Adds up the sum of all the numbers that have been entered
                 return 0;
 }
 /*
     First I went through and cleaned up the code so that it was a little more spaced out and easier to read,
     removed some unnecessary characters and spaces then came up with adding a break which allowed it to perform the addition with the spaces
-    between numbers. Also thinking back to my previous lab I realized having the cin >> num inside the loop would fix the input.
+    between numbers. Also thinking back to my previous lab I realized having the cin >> num inside the loop would fix the input. The break causes the first set of code
+    the sum = sum + num to be skipped and it moves on to the second section of code cout << Sum is with break, without the break it would just skip over the second section 
+    of code since it is within the loop.
 
 */
