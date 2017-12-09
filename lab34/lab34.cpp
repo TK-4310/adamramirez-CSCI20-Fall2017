@@ -11,10 +11,10 @@ Write a program that reads in positive integers from the user, each separated by
 using namespace std; 
 int main(){
         // initialization
-        int num;
+        int num = 0;
         int sum = 0;
         cout << "Enter numbers separated by spaces and terminated with a negative number." << endl;
-        num = 0;
+        cin >> num;
          // read first number
         
         
