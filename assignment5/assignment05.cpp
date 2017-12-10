@@ -1,9 +1,9 @@
 //Created by: Adam Ramirez
 //Created on: 12/05/2017
 //Last updated on: 12/09/2017
-//Description: Assignment 5.0 - Rankings, This originally started as an ELO calculator but after spending a large amount of my time studying the
+//Description: Assignment 5.0 - Rankings, This originally started as an ELO calculator but after spending a large ammount of my time studying the
 //      ELO equation and not finding a simple way or just a way that I could implement it now I decided to change how to do my rankings. So now instead of using
-//      a complex calculator I'm just using the amount of games played and the players current record. This is just a base work that I could add to, so it could use
+//      a complex calculator I'm just using the ammount of games played and the players current record. This is just a base work that I could add to, so it could use
 //      an ELO calculator in the future while keeping track of records and an updatable standings board. It currently works for a small group of people but with minor
 //      alterations can be made to easily add or remove players. I tried to make sure I didn't use zybooks since I wont have access to it after the semester.
 //      
@@ -16,33 +16,33 @@
 #include <algorithm>
 using namespace std;
 
-int sorter(int loses[]){
-    const int tot_play = 6;
+int sorter(int loses[]){        //Sort function that uses loses to sort out the current rankings
+    const int tot_play = 6;     //The magic, the chemical x, without this little function I would have had to find another way to perform sorting
     
-    sort(loses, loses + tot_play);
+    sort(loses, loses + tot_play);  //Sorts loses based on the tot_play ammount
 }
 
 int main(){
-    string player[10];
+    string player[10];          //array for players first names and lastnames below
     string player_lastname[10];
     
-    int loses[10];
+    int loses[10];      //arrays for number of loses, copy of number of loses, number of wins and number of games
     int loses2[10];
     int wins[10];
     int numb_games[10];
     
-    int j = 0;
+    int j = 0;              //Used for 'for' loops
     int k = 0;
     int i = 0;
-    int count = 1;
+    int count = 1;          //counts were used for data input as well as data testing
     int count2 = 1;
-    int total_players = 6;
+    int total_players = 6;  //number of user, meant to be used wider when needed so there's less updating of the code with additional players
     
-    bool check[10];
+    bool check[10];         //boolean created to be a switch for data output
     
-    ifstream inFS;
-    ofstream outFS;
-    inFS.open("players.txt");
+    ifstream inFS;          //sets ifstream, the input for a doc as inFS
+    ofstream outFS;         //sets ofstream, the output to a doc as outFS
+    inFS.open("players.txt");   //opens 'players.txt' file and 'standings.txt' files
     outFS.open("standings.txt");
     
     if (!inFS.is_open()){       //Incase input.txt can't be pulled
