@@ -1,0 +1,9 @@
+Creating elo calculator start with creating 1 v 1 calculator then convert that to be used by
+2 v 2 based on team names
+players start with 800 ELO then lose a certain ammount depending on opponents
+Create two text files one to contain users and another to output their current standings
+
+string player1[20]
+string player2[20]
+
+int count[20] counts number of players played games
