@@ -131,4 +131,17 @@ after some altering. Started with everyone having 3 games on contiuing my testin
 wins and loses and kept running the program I would end up with an updated standings. I originally tried to use wins
 to sort but that failed since it would be a decending list so I used loses which worked. Removed userid's
 not needed when using current comparison. I wanted to keep the console output so the user could just keep track 
-of what's being documented in the standings text and wouldn't have to check the file before making a fix. */
+of what's being documented in the standings text and wouldn't have to check the file before making a fix. User input is all based
+on the document players.txt limiting user based errors so if any errors occur it should be based on the txt file more than likely
+being incorrectly filled out.
+
+Appropriate user input/output and user error handling - user input and ouput is based on the files, error handling should be limited
+    but manual tests are there to check sections
+Appropriate variables including at least one array. - so many array and variables used including different data types, variable types.
+    Pointing out the use of boolean as a switch.
+A class with appropriate functions - Created a single class with a single function but it is the most important piece of this project
+    without it this would have been much more difficult and taken significantly more time. The sort funtion created above.
+A decision and/or loop - loops used for and while loops to pull data and print out my information.
+File input and/or output - I created a users input doc and an output doc for users to view, also with the console output for ease of 
+scanning the data being entered into the output doc.
+*/
